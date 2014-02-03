@@ -17,11 +17,10 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: komoot
+  database: railsrest_development
+  username: railsrest
+  password: railsrest
   pool: 5
-  host: <%= ENV['OPENSHIFT_POSTGRESQL_DB_HOST'] %>
-  username: adminbrymkxk
-  password: <%= ENV['OPENSHIFT_POSTGRESQL_DB_PASSWORD'] %>
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have

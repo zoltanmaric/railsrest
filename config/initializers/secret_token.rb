@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Railsrest::Application.config.secret_key_base = '385cd1f583744a608bdd33a6e70c2978fdec0d276a7b9e8823baf8bd2f49bd3c1aa1468c4cb5d10a42dcceec4f99836bc4b787134412face070cc36f73802821'
+Railsrest::Application.config.secret_key_base = '43090031b0b56ca2d2336f1adfc2e2cd789458c275c3e0988cfbeddf4ad7f2d3a96444bbec3c46a73221aff4a69d6a34e462ab24ad285bc154be9f74857b31af'
