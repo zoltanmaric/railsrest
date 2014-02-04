@@ -22,6 +22,20 @@ CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
 COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
 
 
+--
+-- Name: postgis; Type: EXTENSION; Schema: -; Owner: -
+--
+
+CREATE EXTENSION IF NOT EXISTS postgis WITH SCHEMA public;
+
+
+--
+-- Name: EXTENSION postgis; Type: COMMENT; Schema: -; Owner: -
+--
+
+COMMENT ON EXTENSION postgis IS 'PostGIS geometry, geography, and raster spatial types and functions';
+
+
 SET search_path = public, pg_catalog;
 
 SET default_tablespace = '';
@@ -78,6 +92,14 @@ ALTER TABLE ONLY timestamped_points ALTER COLUMN id SET DEFAULT nextval('timesta
 
 
 --
+-- Data for Name: spatial_ref_sys; Type: TABLE DATA; Schema: public; Owner: -
+--
+
+COPY spatial_ref_sys (srid, auth_name, auth_srid, srtext, proj4text) FROM stdin;
+\.
+
+
+--
 -- Name: timestamped_points_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -99,3 +121,5 @@ CREATE UNIQUE INDEX unique_schema_migrations ON schema_migrations USING btree (v
 SET search_path TO "$user",public;
 
 INSERT INTO schema_migrations (version) VALUES ('20140203225300');
+
+INSERT INTO schema_migrations (version) VALUES ('20140204220916');
