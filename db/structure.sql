@@ -61,7 +61,8 @@ CREATE TABLE timestamped_points (
     latitude numeric(9,6) NOT NULL,
     longitude numeric(9,6) NOT NULL,
     created_at timestamp without time zone,
-    updated_at timestamp without time zone
+    updated_at timestamp without time zone,
+    altitude numeric(7,1)
 );
 
 
@@ -123,3 +124,5 @@ SET search_path TO "$user",public;
 INSERT INTO schema_migrations (version) VALUES ('20140203225300');
 
 INSERT INTO schema_migrations (version) VALUES ('20140204220916');
+
+INSERT INTO schema_migrations (version) VALUES ('20140204235548');
