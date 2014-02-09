@@ -1,4 +1,5 @@
 class TimestampedPoint < ActiveRecord::Base
+	belongs_to :tour
 	scope :close_to, -> (latitude, longitude, distance_in_meters = 2000) {
 	  where(%{
 	    ST_DWithin(
