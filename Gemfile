@@ -37,3 +37,6 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+# Foreign key support in migrations:
+gem "foreigner"
